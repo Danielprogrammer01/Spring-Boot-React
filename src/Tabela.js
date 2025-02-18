@@ -1,7 +1,7 @@
-function Tabela(){
-    return(
+function Tabela({ vetor }) {
+    return (
 
-        <table>
+        <table className="table">
             <thead>
                 <tr>
                     <th>#</th>
@@ -10,6 +10,20 @@ function Tabela(){
                     <th>Selecionar</th>
                 </tr>
             </thead>
+            <tbody>
+                {
+                    vetor.map((obj, indice) => (
+                        <>
+                            <tr key={indice} />
+                            <td>{indice + 1}</td>
+                            <td>{Object.nome}</td>
+                            <td>{Object.marca}</td>
+                            <td><button className="btn btn=sucess">Selecionar</button></td>
+                        </>
+                    ))
+                }
+
+            </tbody>
         </table>
     )
 }
